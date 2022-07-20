@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
   <title>Livro de Receitas</title>
 </head>
 <body>
   <header>
-    <nav class="upMenu">
+    <nav id="upMenu">
       <div class="container">
-        <img src="assets/LogoSemFundo.png" class="upMenuImage" />
+        <img src="assets/LogoSemFundo.png" alt="Livro de Receitas" />
         <ul>
-          <li><a href="#"> Início </a></li>
-          <li><a href="#"> Receitas </a></li>
-          <li><a href="#"> Contato </a></li>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Receitas</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </div>
     </nav>
-    <div class="searchBar">
+    <div id="search">
       <div class="container">
         <label>Buscar receita</label>
-        <input type="text" placeholder="Nome da Receita"/>
+        <input type="text" class="search" placeholder="Nome da receita"/>
         <button>
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.879px" height="119.799px" viewBox="0 0 122.879 119.799" enable-background="new 0 0 122.879 119.799" xml:space="preserve">
             <g>
@@ -38,9 +38,9 @@
   </header>
   <main>
     <section class="container highlight">
-      <div class="highlightRecipe">
-        <span>Pão de Queijo</span>
-        <img src="assets/recipes/paoDeQueijo.jpg" alt="Foto da receita de pão de queijo" />
+      <div class="highlightImage">
+        <span class="recipeTitle">Pão de Queijo</span>
+        <img src="assets/recipes/paoDeQueijo.jpg" alt="Receita de pão de queijo" />
       </div>
       <aside>
         <header>Bem-vindo ao nosso Livro de Receitas</header>
@@ -48,76 +48,88 @@
         <p>Sinta-se a vontade para explorar e conhecer as delicias aqui reunidas.</p>
       </aside>
     </section>
-    <section class="recipes">
-      <header class="classeDoVictor">
+    <section id="recipes">
+      <header class="recipesHeader">
         <h1>Sugestões para hoje</h2>
         <h2>Receitas para alegrar o seu dia</h2>
       </header>
-      <div class="container recipesContainer">
-        <article class="card">
-          <div class="cardImage">
-            <button>
+      <div class="container recipesBody">
+        <article class="recipeCard">
+          <div class="recipeImage">
+            <button class="recipeFavorite" title="Favoritar receita">
+
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 117.19">
                 <path d="M64.39,2,80.11,38.76,120,42.33a3.2,3.2,0,0,1,1.83,5.59h0L91.64,74.25l8.92,39a3.2,3.2,0,0,1-4.87,3.4L61.44,96.19,27.09,116.73a3.2,3.2,0,0,1-4.76-3.46h0l8.92-39L1.09,47.92A3.2,3.2,0,0,1,3,42.32l39.74-3.56L58.49,2a3.2,3.2,0,0,1,5.9,0Z"/>
               </svg>
             </button>
-            <img src="assets/recipes/sanduicheDeFrango.jpg"/>
+            <img src="assets/recipes/sanduicheDeFrango.jpg" alt="Foto de uma receita" />
           </div>
-          <div class="cardInfo">
+          <div class="recipeInfo">
             <label class="recipeType">Lanche</label>
             <h3>Sanduiche de Frango</h3>
             <label class="recipeAuthor">por <span>Letícia Vargas</span></label>
-            <span class="cardFavorite">
+            <span class="recipeFavorites">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 107.39">
                 <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
               </svg>
               <label>30.995</label>
             </span>
-            <a href="#" class="recipeButton">ver receita</a>
+
+            <a href="#" target="_self" class="recipeLink">
+              ver receita
+            </a>
           </div>
         </article>
-        <article class="card">
-          <div class="cardImage">
-            <button>
+        <article class="recipeCard">
+          <div class="recipeImage">
+            <button class="recipeFavorite" title="Favoritar receita">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 117.19">
                 <path d="M64.39,2,80.11,38.76,120,42.33a3.2,3.2,0,0,1,1.83,5.59h0L91.64,74.25l8.92,39a3.2,3.2,0,0,1-4.87,3.4L61.44,96.19,27.09,116.73a3.2,3.2,0,0,1-4.76-3.46h0l8.92-39L1.09,47.92A3.2,3.2,0,0,1,3,42.32l39.74-3.56L58.49,2a3.2,3.2,0,0,1,5.9,0Z"/>
               </svg>
             </button>
-            <img src="assets/recipes/sanduicheDeFrango.jpg"/>
+
+            <img src="assets/recipes/boloDeLaranja.jpg" alt="Foto de uma receita" />
           </div>
-          <div class="cardInfo">
-            <label class="recipeType">Lanche</label>
-            <h3>Sanduiche de Frango</h3>
-            <label class="recipeAuthor">por <span>Letícia Vargas</span></label>
-            <span class="cardFavorite">
+          <div class="recipeInfo">
+            <label class="recipeType">Bolos</label>
+            <h3>Bolo de Laranja</h3>
+            <label class="recipeAuthor">por <span>Yanersys</span></label>
+            <span class="recipeFavorites">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 107.39">
                 <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
               </svg>
               <label>30.995</label>
             </span>
-            <a href="#" class="recipeButton">ver receita</a>
+            <a href="#" target="_self" class="recipeLink">
+              ver receita
+            </a>
           </div>
         </article>
-        <article class="card">
-          <div class="cardImage">
-            <button>
+        <article class="recipeCard">
+          <div class="recipeImage">
+            <button class="recipeFavorite" title="Favoritar receita">
+
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 117.19">
                 <path d="M64.39,2,80.11,38.76,120,42.33a3.2,3.2,0,0,1,1.83,5.59h0L91.64,74.25l8.92,39a3.2,3.2,0,0,1-4.87,3.4L61.44,96.19,27.09,116.73a3.2,3.2,0,0,1-4.76-3.46h0l8.92-39L1.09,47.92A3.2,3.2,0,0,1,3,42.32l39.74-3.56L58.49,2a3.2,3.2,0,0,1,5.9,0Z"/>
               </svg>
             </button>
-            <img src="assets/recipes/sanduicheDeFrango.jpg"/>
+
+            <img src="assets/recipes/hallacaVenezolana.jpg" alt="Foto da Hallaca Venenolana" />
           </div>
-          <div class="cardInfo">
-            <label class="recipeType">Lanche</label>
-            <h3>Sanduiche de Frango</h3>
-            <label class="recipeAuthor">por <span>Letícia Vargas</span></label>
-            <span class="cardFavorite">
+          <div class="recipeInfo">
+            <label class="recipeType">Prato típico</label>
+            <h3>Hallaca Venenolana</h3>
+            <label class="recipeAuthor">por <span>Leonardo</span></label>
+            <span class="recipeFavorites">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 107.39">
                 <path class="cls-1" d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-3.33,6.65-10.11,14.56-17.61,22.32-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55C29.16,76.89,1,55.92,0,29.94-.63,11.74,13.73.08,30.25.29c14.76.2,21,7.54,30.58,16.89Z"/>
               </svg>
               <label>30.995</label>
             </span>
-            <a href="#" class="recipeButton">ver receita</a>
+            <a href="#" target="_self" class="recipeLink">
+              ver receita
+            </a>
+
           </div>
         </article>
       </div>
@@ -130,34 +142,37 @@
         <div class="infoCollumn">
           <h3>Categoria de receitas</h3>
           <ul>
-            <li><a href="#"> Todas</a> </li>
-            <li><a href="#"> Rápidas</a> </li>
-            <li><a href="#"> Lanches</a> </li>
-            <li><a href="#"> Vegetariana</a> </li>
-            <li><a href="#"> Novas</a> </li>
+            <li><a href="#">Todas</a></li>
+            <li><a href="#">Rápidas</a></li>
+            <li><a href="#">Lanches</a></li>
+            <li><a href="#">Vegetariana</a></li>
+            <li><a href="#">Novas</a></li>
           </ul>
         </div>
         <div class="infoCollumn">
           <h3>Sobre</h3>
           <ul>
-            <li><a href="#"> Quem somos</a> </li>
-            <li><a href="#"> Termos de uso</a> </li>
-            <li><a href="#"> Contato</a> </li>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Contato</a></li>
           </ul>
         </div>
         <div class="infoSocialMedia">
           <h3>Nossas redes</h3>
           <span>
-             <a href="#"><img src="assets/instagram.png" alt="Visite nosso perfil no Instagram"/></a>
-             <a href="#"><img src="assets/facebook.png" alt="Visite nossa página no facebook"/> </a>
-             <a href="#"><img src="assets/youtube.png" alt="Você já conhece nosso canal do youtube" /> </a>
-             <a href="#"><img src="assets/twitter.png" alt="Conheça nosso perfil no twitter" /> </a>
+            <a href="#"><img src="assets/instagram.png" alt="Visite nosso perfil no Instagram"/></a>
+            <a href="#"><img src="assets/facebook.png" alt="Visite nossa página no facebook"/></a>
+            <a href="#"><img src="assets/youtube.png" alt="Você já conhece nosso canal do youtube" /></a>
+            <a href="#"><img src="assets/twitter.png" alt="Conheça nosso perfil no twitter" /></a>
           </span>
           <img src="assets/LogoSemFundo.png" alt="Livro de Receitas" />
         </div>
       </div>
-      <div>
+      <div class="creativecommons">
         <span>2022 Produzido colaborativamente - </span>
+        <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0
+          <img style="height:20px!important;margin-left:6px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1">
+          <img style="height:20px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
       </div>
     </div>
   </footer>
