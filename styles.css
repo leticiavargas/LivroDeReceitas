@@ -1,4 +1,5 @@
 /*** Configurações globais ***/
+
 * {
   padding: 0;
   margin: 0;
@@ -24,6 +25,7 @@ body {
 
 ul {
   list-style: none;
+
 }
 
 @media (min-width: 992px) {
@@ -38,16 +40,19 @@ ul {
   }
 }
 
+
 /*** MENU SUPERIOR ***/
 #upMenu {
   height: 70px;
   width: 100%;
+
   background-color: #580042;
   padding: 10px 50px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
 }
+
 
 #upMenu .container {
   display: flex;
@@ -69,6 +74,7 @@ ul {
 }
 
 #upMenu .container ul li:hover {
+
   text-decoration: underline 3px solid;
   text-decoration-color: #4E9231;
   opacity: 0.8;
@@ -83,6 +89,7 @@ ul {
 #search {
   display: flex;
   align-items: center;
+
   background-color: #FFFFFF;
   width: 100%;
   height: 60px;
@@ -108,6 +115,7 @@ ul {
   background-color: #580042;
   border-radius: 50%;
   cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,6 +127,7 @@ ul {
   height: 60%;
   fill:#FFFFFF;
 }
+
 
 #search .container button:hover {
   border-color: #580042;
@@ -162,6 +171,7 @@ ul {
   font-weight: 700;
   text-align: center;
   line-height: 50px;
+
 }
 
 .highlight aside {
@@ -181,6 +191,7 @@ ul {
   color: #580042;
   margin-bottom: 20px;
 }
+
 .highlight aside p {
   margin-bottom: 10px;
 }
@@ -251,6 +262,7 @@ ul {
 }
 
 .recipeCard .recipeFavorite:hover {
+
   border-color: #580042;
   background-color: #FFFFFF;
 }
@@ -293,6 +305,7 @@ ul {
 }
 
 .recipeInfo .recipeAuthor span {
+
   color: #580042;
   font-weight: 700;
 }
@@ -302,6 +315,7 @@ ul {
   align-items: center;
   justify-content: center;
   margin: 10px 0;
+
   color: #4E9231;
   font-size: 13px;
 }
@@ -335,7 +349,9 @@ ul {
   color: #580042;
 }
 
+
 /*** FOOTER ***/
+
 footer {
   background-color: #580042;
   min-height: 200px;
