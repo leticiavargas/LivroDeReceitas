@@ -1,4 +1,4 @@
-/*** Configurações globais ***/
+/* Configurações globais */
 
 * {
   padding: 0;
@@ -6,26 +6,25 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: #f0f0f0;
+}
+
 a, :visited, :hover, :active {
   text-decoration: inherit;
   color: inherit;
 }
 
-body {
-  background-color: #f0f0f0;
-  height: 100%;
+button {
+  cursor: pointer;
 }
 
 .container {
+  /*width: 1140px;*/
+  margin: 0 auto;
   padding: 0 15px;
-  margin:  0 auto;
-  width: 100%;
   box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
-
+  height: 100%;
 }
 
 @media (min-width: 992px) {
@@ -41,11 +40,10 @@ ul {
 }
 
 
-/*** MENU SUPERIOR ***/
-#upMenu {
-  height: 70px;
+/* Estilos do menu superior */
+.upMenu {
   width: 100%;
-
+  height: 70px;
   background-color: #580042;
   padding: 10px 50px;
   box-sizing: border-box;
@@ -53,365 +51,315 @@ ul {
   align-items: center;
 }
 
-
-#upMenu .container {
+.upMenu .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-#upMenu .container img {
+.upMenu .container .upMenuImage {
   height: 30px;
 }
 
-#upMenu .container ul {
+.upMenu .container ul {
   display: flex;
   color: #FFFFFF;
+  list-style: none;
 }
 
-#upMenu .container ul li {
+.upMenu .container ul li {
   padding: 0 10px;
-  cursor: pointer;
 }
 
-#upMenu .container ul li:hover {
-
+.upMenu .container ul li:hover {
   text-decoration: underline 3px solid;
   text-decoration-color: #4E9231;
   opacity: 0.8;
 }
 
-#upMenu .container ul li:active {
-  text-decoration: underline wavy;
-  text-decoration-color: #1E6600;
-}
-
-/*** Barra de search***/
-#search {
-  display: flex;
-  align-items: center;
-
+/* Search bar */
+.searchBar {
   background-color: #FFFFFF;
   width: 100%;
   height: 60px;
 }
 
-#search .container {
+.searchBar .container {
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
-#search .container .search {
+.searchBar .container input {
   margin: 0 10px;
   border-radius: 10px;
-  width: 40%;
   padding: 2px 6px;
-  border-color: #580042;
+  width: 40%;
 }
 
-#search .container button {
+.searchBar .container button {
   height: 35px;
   width: 35px;
-  border: none;
-  background-color: #580042;
   border-radius: 50%;
-  cursor: pointer;
-
+  background-color: #580042;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid transparent;
 }
-
-#search .container button svg {
+.searchBar .container button svg {
   width: 60%;
   height: 60%;
   fill:#FFFFFF;
 }
 
-
-#search .container button:hover {
+.searchBar .container button:hover {
   border-color: #580042;
   background-color: #FFFFFF;
 }
 
-#search .container button:hover svg {
+.searchBar .container button:hover svg {
   fill: #580042;
 }
 
-/*** Highlight Section***/
+/* highlight */
 .highlight {
-  height: 300px;
   display: flex;
+  height: 300px;
   margin-top: 20px;
 }
-
-.highlight .highlightImage {
+.highlight .highlightRecipe {
   width: 100%;
-  height: 100%;
-  border-radius: 6px;
   position: relative;
 }
 
-.highlight .highlightImage img {
+.highlight .highlightRecipe img {
   width: 100%;
-  object-fit: cover;
   height: 100%;
-  border-radius: inherit;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
-.highlight .highlightImage .recipeTitle {
+.highlight .highlightRecipe span {
   background-color: #580042;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: #FFFFFF;
   height: 50px;
   width: 250px;
   font-size: 20px;
   font-weight: 700;
-  text-align: center;
   line-height: 50px;
-
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
 }
 
 .highlight aside {
   width: 400px;
-  box-sizing: border-box;
-  margin-left: 50px;
-  padding: 20px;
-  border-radius: 10px;
   background-color: #FFFFFF;
+  margin-left: 50px;
+  box-sizing: border-box;
+  padding: 20px;
   box-shadow: 5px 5px 14px 1px rgba(0,0,0,0.3);
+  border-radius: 10px;
 }
 
 .highlight aside header {
-  text-align: center;
   font-size: 20px;
-  font-weight: 700;
   color: #580042;
   margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .highlight aside p {
   margin-bottom: 10px;
 }
 
-/*** Recipes Section ***/
-.recipesHeader {
-  text-align: center;
-  margin: 20px 0;
+/* Seção de Receitas */ 
+.classeDoVictor {
   background-color: #580042;
-  color: #FFFFFF;
-  padding: 10px 0;
+  margin: 20px 0;
+  color:#FFFFFF;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
 }
 
-.recipesHeader h1 {
+.classeDoVictor h1 {
   font-size: 20px;
+  font-weight: 700;
 }
 
-.recipesHeader h2 {
+.classeDoVictor h2 {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: normal;
 }
 
-.recipesBody {
+.recipesContainer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
-.recipesBody .recipeCard {
+.recipes .container .card {
   height: 200px;
   width: 350px;
-  border-radius: 10px;
   background-color: #FFFFFF;
+  box-shadow: 5px 5px 14px 1px rgba(0,0,0,0.3);
+  border-radius: 10px;
   display: flex;
   margin-bottom: 20px;
-  box-shadow: 5px 5px 14px 1px rgba(0,0,0,0.3);
 }
 
-.recipesBody .recipeCard .recipeImage {
+.recipes .container .card .cardImage {
   width: 145px;
-  height: 200px;
+  height: 100%;
   border-radius: inherit;
-  overflow: hidden;
 }
 
-.recipesBody .recipeCard .recipeImage img {
+.recipes .container .card .cardImage img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  height: inherit;
-  width: inherit;
+  border-radius: inherit;
 }
 
-.recipeCard .recipeFavorite {
-  height: 20px;
-  width: 20px;
-  background-color: #580042;
-  border-radius: 50%;
+.recipes .container .card .cardImage button {
   position: absolute;
-  border: 1px solid transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #580042;
   margin: 8px;
   cursor: pointer;
-} 
+  border: 1px solid transparent;
+}
 
-.recipeCard .recipeFavorite svg {
+.recipes .container .card .cardImage button svg {
   fill: #FFFFFF;
   height: 60%;
   width: 70%;
 }
 
-.recipeCard .recipeFavorite:hover {
-
+.recipes .container .card .cardImage button:hover {
   border-color: #580042;
   background-color: #FFFFFF;
 }
 
-.recipeCard .recipeFavorite:hover svg {
+.recipes .container .card .cardImage button:hover svg {
   fill: #580042;
 }
 
-.recipesBody .recipeCard .recipeInfo {
-  display: flex;
-  width: 205px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+.recipes .container .card .cardInfo {
   padding: 12px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.recipeInfo .recipeType {
+.recipes .container .card .cardInfo .recipeType {
+  color: #4E9231;
   font-size: 12px;
-  color:#4E9231;
 }
 
-.recipeInfo h3 {
+.recipes .container .card .cardInfo h3 {
   font-size: 16px;
   font-weight: 700;
-  max-width: 90%;
-  max-height: 35px;
-  line-height: 18px;
-  text-overflow: ellipsis;
   text-transform: uppercase;
-  overflow: hidden;
   margin: 10px;
+  text-align: center;
 }
 
-.recipeInfo .recipeAuthor {
-  display: inline;
+.recipes .container .card .cardInfo .recipeAuthor {
   font-size: 13px;
 }
 
-.recipeInfo .recipeAuthor span {
-
+.recipes .container .card .cardInfo .recipeAuthor span {
   color: #580042;
   font-weight: 700;
 }
 
-.recipeInfo .recipeFavorites {
+.recipes .container .card .cardInfo .cardFavorite {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0;
-
+  margin: 10px;
   color: #4E9231;
   font-size: 13px;
 }
 
-.recipeInfo .recipeFavorites svg {
+.recipes .container .card .cardInfo .cardFavorite svg {
   height: 18px;
   width: 18px;
   fill: #CC2448;
   margin-right: 6px;
 }
 
-.recipeInfo .recipeLink {
+.recipes .container .card .cardInfo .recipeButton {
   background-color: #580042;
   color: #FFFFFF;
-  height: 16px;
-  width: 100%;
   border-radius: 30px;
-  text-align: center;
+  width: 100%;
+  height: 20px;
   font-size: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 2px solid transparent;
+  text-align: center;
+  line-height: 20px;
   letter-spacing: 0.5px;
+  border: 2px solid transparent;
 }
-
-.recipeInfo .recipeLink:hover {
+.recipes .container .card .cardInfo .recipeButton:hover {
   border-color: #580042;
   background-color: #FFFFFF;
   color: #580042;
 }
 
-
-/*** FOOTER ***/
+/* Rodapé */
 
 footer {
   background-color: #580042;
   min-height: 200px;
   width: 100%;
+  color: #FFFFFF;
 }
 
 .footer {
   display: flex;
-  padding-top: 25px;
   justify-content: space-between;
-  color: #FFFFFF;
-  font-size: 14px;
+  padding-top: 25px;
   margin-top: 20px;
 }
 
-.footer  h3 {
+.footer .infoCollumn h3 {
   font-size: 21px;
   margin-bottom: 15px;
 }
 
-.footer ul li:hover {
+.footer .infoCollumn ul {
+  list-style: none;
+}
+
+.footer .infoCollumn ul li:hover {
   text-decoration: underline 3px solid;
   text-decoration-color: #4E9231;
   opacity: 0.8;
 }
 
-.footer ul li:active {
-  text-decoration: underline wavy;
-  text-decoration-color: #1E6600;
-}
-
-.infoSocialMedia {
+.footer .infoSocialMedia {
   display: flex;
   flex-direction: column;
 }
-
-.infoSocialMedia span {
-  width: 100%;
+.footer .infoSocialMedia h3 {
+  margin-bottom: 15px;
+}
+.footer .infoSocialMedia span {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin: 5px 0 15px;
 }
 
-.infoSocialMedia span a:hover {
+.footer .infoSocialMedia span a:hover {
   transform: scale(1.1);
   transition: ease all 0.3s;
 }
 
-.infoSocialMedia img {
+.footer .infoSocialMedia img {
   height: 30px;
-}
-
-.creativecommons {
-  color: #FFFFFF;
-  font-size: 11px;
-  text-align: center;
-  padding: 15px 0 25px;
-  font-weight: 200;
-  display: flex;
-  justify-content: center;
-  align-items: end;
 }
