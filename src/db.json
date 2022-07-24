@@ -1,0 +1,238 @@
+{
+  "recipes": [
+    {
+      "author": "Marisa Basilio",
+      "title": "Apas Recheada",
+      "type": "sobremesas",
+      "image": "apasRecheadas.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Pedro Gil Bonett",
+      "title": "Arepa",
+      "type": "lanches",
+      "image": "arepas.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Maria R Medicci",
+      "title": "Arepa Andina",
+      "type": "sobremesas",
+      "image": "arepasAndinas.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Solangelis Hernandez",
+      "title": "Bolo de Abacaxi",
+      "type": "bolos",
+      "image": "boloAbacaxi.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "José Freites",
+      "title": "Bolo de Cenoura",
+      "type": "bolos",
+      "image": "boloDeCenoura.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Tabitha Philistin Destin",
+      "title": "Bolo de Cenoura 2",
+      "type": "bolos",
+      "image": "boloDeCenoura.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Julião Langa",
+      "title": "Bolo de Chuva",
+      "type": "bolos",
+      "image": "boloDeChuva.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Yanersys",
+      "title": "Bolo de Laranja",
+      "type": "bolos",
+      "image": "boloDeLaranja.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Solangelis Hernandez",
+      "title": "Bolo Três Leites",
+      "type": "bolos",
+      "image": "boloTresLeites.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Salvador A. Intchala",
+      "title": "Caldo de Mancara",
+      "type": "caldos",
+      "image": "caldoDeMancarra.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Solangelis Hernandez",
+      "title": "Frango Frito",
+      "type": "aves",
+      "image": "frangoFrito.jpg",
+      "country": "",
+      "favorite": 123,
+      "highlight": false
+    },
+    {
+      "author": "Leonardo",
+      "title": "Hallaca Venezolana",
+      "type": "bolos",
+      "image": "hallacaVenozolana.jpg",
+      "favorite": 123,
+      "country": "Venezuela",
+      "highlight": false
+    },
+    {
+      "author": "Yuliana Rivas",
+      "title": "Jujubas",
+      "type": "sobremesas",
+      "image": "jujuba.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "José González",
+      "title": "Massa de pizza",
+      "type": "massas",
+      "image": "massaDePizza.jpg",
+      "favorite": 123,
+      "country": "Italia",
+      "highlight": false
+    },
+    {
+      "author": "Carolina Campos jimenez",
+      "title": "Pabellon",
+      "type": "carnes",
+      "image": "pabellon.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Humberto Colmenares",
+      "title": "Panquecas",
+      "type": "massas",
+      "image": "panqueca.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Catia Manuel",
+      "title": "Pão",
+      "type": "massas",
+      "image": "pao.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "José González",
+      "title": "Pão Brioche",
+      "type": "massas",
+      "image": "paoBrioche.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Boaz Destin",
+      "title": "Pão de queijo",
+      "type": "massas",
+      "image": "paoDeQueijo.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Yanersys",
+      "title": "Papas Rellenas",
+      "type": "vegetais",
+      "image": "papasRellenas.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Humberto Colmenares",
+      "title": "Pasta com Carne Moida",
+      "type": "carnes",
+      "image": "pastaComCarneMoida.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Gabriela Zapata",
+      "title": "Pudim",
+      "type": "sobremesas",
+      "image": "pudim.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Gabriela Nunex",
+      "title": "Quesillo",
+      "type": "sobremesas",
+      "image": "quesillo.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Maloni Brown",
+      "title": "Roti",
+      "type": "carnes",
+      "image": "roti.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    },
+    {
+      "author": "Letícia Vargas",
+      "title": "Sanduiche de Frango",
+      "type": "lanches",
+      "image": "sanduicheDeFrango.jpg",
+      "favorite": 123,
+      "country": "Brasil",
+      "highlight": false
+    },
+    {
+      "author": "Catia Manuel",
+      "title": "Sopa de Frango",
+      "type": "sopas",
+      "image": "sopaDeFrango.jpg",
+      "favorite": 123,
+      "country": "",
+      "highlight": false
+    }
+  ]
+}

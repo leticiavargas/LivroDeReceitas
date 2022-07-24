@@ -244,8 +244,8 @@ ul {
   cursor: pointer;
 } 
 
-.recipeCard .recipeFavorite svg {
-  fill: #FFFFFF;
+.recipeCard .recipeFavorite .star {
+  color: #FFFFFF;
   height: 60%;
   width: 70%;
 }
@@ -306,10 +306,10 @@ ul {
   font-size: 13px;
 }
 
-.recipeInfo .recipeFavorites svg {
+.recipeInfo .recipeFavorites .heart {
   height: 18px;
   width: 18px;
-  fill: #CC2448;
+  color: #CC2448;
   margin-right: 6px;
 }
 
