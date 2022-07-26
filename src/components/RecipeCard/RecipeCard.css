@@ -1,0 +1,59 @@
+.recipesBody .recipeCard {
+  height: 200px;
+  width: 350px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  display: flex;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 14px 1px rgba(0,0,0,0.3);
+}
+
+.recipesBody .recipeCard .recipeImage {
+  width: 145px;
+  height: 200px;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.recipesBody .recipeCard .recipeImage img {
+  object-fit: cover;
+  height: inherit;
+  width: inherit;
+}
+
+.recipeCard .recipeFavorite {
+  height: 20px;
+  width: 20px;
+  background-color: #580042;
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid transparent;
+  margin: 8px;
+  cursor: pointer;
+} 
+
+.recipeCard .recipeFavorite .star {
+  color: #FFFFFF;
+  height: 60%;
+  width: 70%;
+}
+
+.recipeCard .recipeFavorite:hover {
+  border-color: #580042;
+  background-color: #FFFFFF;
+}
+
+.recipeCard .recipeFavorite:hover svg {
+  fill: #580042;
+}
+
+.recipesBody .recipeCard .recipeInfo {
+  display: flex;
+  width: 205px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  box-sizing: border-box;
+}

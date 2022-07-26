@@ -2,10 +2,29 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'; 
 import { faInstagram, faFacebook, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
-
 import './App.css';
 
+import RecipeCard from './components/RecipeCard/RecipeCard';
+import Destaque from './components/Destaque/Destaque';
+
+import dados from './db.json';
+
 function App() {
+
+  const RECEITAS = dados.recipes;
+  const receitaDestaque = RECEITAS.filter((receita) => (receita.highlight == true));
+  //console.log("RECEITA", receitaDestaque);
+  /*const receitaDestaque2 = RECEITAS.filter(function(receita) {
+    return receita.highlight == true
+  });*/
+
+  const receitaSome = RECEITAS.some((receita) => (receita.type == "bolos"));
+  //console.log("RECEITA do TIPO BOLOS?", receitaSome);
+
+  const receitasFind = RECEITAS.find((receita) => (receita.type == 'bolos'));
+  console.log("RECEITAS DO TIPO BOLO", receitasFind);
+
+
 
   return (
     <>
@@ -32,10 +51,7 @@ function App() {
       </header>
       <main>
         <section className="container highlight">
-          <div className="highlightImage">
-            <span className="recipeTitle">Pão de Queijo</span>
-            <img src="/recipes/paoDeQueijo.jpg" alt="Receita de pão de queijo" />
-          </div>
+         <Destaque imagem={receitaDestaque[0].image} titulo={receitaDestaque[0].title} />
           <aside>
             <header>Bem-vindo ao nosso Livro de Receitas</header>
             <p>Um projeto colaborativo com receitas de diversos países.</p>
@@ -48,66 +64,20 @@ function App() {
             <h2>Receitas para alegrar o seu dia</h2>
           </header>
           <div className="container recipesBody">
-            <article className="recipeCard">
-              <div className="recipeImage">
-                <button className="recipeFavorite" title="Favoritar receita">
-                  <FontAwesomeIcon icon={faStar} className="star" />
-                </button>
-                <img src="/recipes/sanduicheDeFrango.jpg" alt="Foto de uma receita" />
-              </div>
-              <div className="recipeInfo">
-                <label className="recipeType">Lanche</label>
-                <h3>Sanduiche de Frango</h3>
-                <label className="recipeAuthor">por <span>Letícia Vargas</span></label>
-                <span className="recipeFavorites">
-                  <FontAwesomeIcon icon={faHeart} className="heart" />
-                  <label>30.995</label>
-                </span>
-                <a href="#" target="_self" className="recipeLink">
-                  ver receita
-                </a>
-              </div>
-            </article>
-            <article className="recipeCard">
-              <div className="recipeImage">
-                <button className="recipeFavorite" title="Favoritar receita">
-                  <FontAwesomeIcon icon={faStar} className="star" />
-                </button>
-                <img src="recipes/boloDeLaranja.jpg" alt="Foto de uma receita" />
-              </div>
-              <div className="recipeInfo">
-                <label className="recipeType">Bolos</label>
-                <h3>Bolo de Laranja</h3>
-                <label className="recipeAuthor">por <span>Yanersys</span></label>
-                <span className="recipeFavorites">
-                  <FontAwesomeIcon icon={faHeart} className="heart" />
-                  <label>30.995</label>
-                </span>
-                <a href="#" target="_self" className="recipeLink">
-                  ver receita
-                </a>
-              </div>
-            </article>
-            <article className="recipeCard">
-              <div className="recipeImage">
-                <button className="recipeFavorite" title="Favoritar receita">
-                  <FontAwesomeIcon icon={faStar} className="star" />
-                </button>
-                <img src="recipes/hallacaVenezolana.jpg" alt="Foto da Hallaca Venenolana" />
-              </div>
-              <div className="recipeInfo">
-                <label className="recipeType">Prato típico</label>
-                <h3>Hallaca Venenolana</h3>
-                <label className="recipeAuthor">por <span>Leonardo</span></label>
-                <span className="recipeFavorites">
-                  <FontAwesomeIcon icon={faHeart} className="heart" />
-                  <label>30.995</label>
-                </span>
-                <a href="#" target="_self" className="recipeLink">
-                  ver receita
-                </a>
-              </div>
-            </article>
+            {
+              RECEITAS.map(function(receita, index){
+                if (index < 3) {
+                return (
+                  <RecipeCard
+                    titulo={receita.title} 
+                    autor={receita.author}
+                    imagem={receita.image}
+                    tipo={receita.type}
+                    favorito={receita.favorite}
+                  />)
+                }
+              })
+            }
           </div>
         </section>
       </main>
