@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'; 
 import { faInstagram, faFacebook, faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -11,6 +11,20 @@ import dados from './db.json';
 
 function App() {
 
+  const [inputValue, setInputValue] = useState('');
+  const [pesquisa, setPesquisa] = useState();
+  const [tituloSecao, setTituloSecao] = useState('Sugestões para hoje');
+  /*const numeros = [0,1,2,3,4,5,6];
+  const numeros2 = [7,8,9,10,11,12];
+
+  const total = numeros.reduce((acumulador, numero) => {
+    return acumulador += numero
+  }, numeros2.reduce((acumulador2, numero2) => {
+    return acumulador2 += numero2
+  },0));
+
+  console.log("REDUCE Total >>", total);*/
+
   const RECEITAS = dados.recipes;
   const receitaDestaque = RECEITAS.filter((receita) => (receita.highlight == true));
   //console.log("RECEITA", receitaDestaque);
@@ -21,10 +35,24 @@ function App() {
   const receitaSome = RECEITAS.some((receita) => (receita.type == "bolos"));
   //console.log("RECEITA do TIPO BOLOS?", receitaSome);
 
-  const receitasFind = RECEITAS.find((receita) => (receita.type == 'bolos'));
-  console.log("RECEITAS DO TIPO BOLO", receitasFind);
+  //console.log("RECEITAS DO TIPO BOLO", receitasFind);
+  
+  const handleSearch = () => {
+    //const inputValue = document.getElementsByClassName('search')[0].value;
+    const receitasFiltradas = RECEITAS.filter((receita) => (receita.type == inputValue));
+    console.log("RECEITAS FILTRADAS >>>", receitasFiltradas);
+    setPesquisa(receitasFiltradas);
+  }
 
+  function handleInputValue(event) {
+    setInputValue(event.target.value);
+  }
 
+  useEffect(() => {
+    if (pesquisa) {
+      setTituloSecao(`Resultado da sua Pesquisa na categoria: ${inputValue}`);
+    }
+  },[pesquisa]);
 
   return (
     <>
@@ -42,8 +70,8 @@ function App() {
         <div id="search">
           <div className="container">
             <label>Buscar receita</label>
-            <input type="text" className="search" placeholder="Nome da receita"/>
-            <button>
+            <input type="text" value={inputValue} onChange={handleInputValue} className="search" placeholder="Nome da receita" />
+            <button onClick={handleSearch}>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
           </div>
@@ -60,23 +88,39 @@ function App() {
         </section>
         <section id="recipes">
           <header className="recipesHeader">
-            <h1>Sugestões para hoje</h1>
+            <h1>{tituloSecao}</h1>
             <h2>Receitas para alegrar o seu dia</h2>
           </header>
           <div className="container recipesBody">
             {
-              RECEITAS.map(function(receita, index){
-                if (index < 3) {
-                return (
-                  <RecipeCard
-                    titulo={receita.title} 
-                    autor={receita.author}
-                    imagem={receita.image}
-                    tipo={receita.type}
-                    favorito={receita.favorite}
-                  />)
-                }
-              })
+              !pesquisa && 
+                RECEITAS.map(function(receita, index){
+                  if (index < 3) {
+                  return (
+                    <RecipeCard
+                      key={index}
+                      titulo={receita.title} 
+                      autor={receita.author}
+                      imagem={receita.image}
+                      tipo={receita.type}
+                      favorito={receita.favorite}
+                    />)
+                  }
+                })
+            }
+            {
+              pesquisa && 
+                pesquisa.map(function(receita, index){
+                  return (
+                    <RecipeCard
+                      key={index}
+                      titulo={receita.title} 
+                      autor={receita.author}
+                      imagem={receita.image}
+                      tipo={receita.type}
+                      favorito={receita.favorite}
+                    />)
+                })
             }
           </div>
         </section>
